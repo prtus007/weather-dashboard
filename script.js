@@ -24,7 +24,7 @@ function loc() {
             container.appendChild(temp);
             container.appendChild(feels);
             container.appendChild(condition);
-            container.appendChild(icon);
+            container.appendChild(icon); 
 
             const conditionText = data.current.condition.text;
             const normalized = conditionText.toLowerCase();
