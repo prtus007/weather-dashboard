@@ -11,6 +11,9 @@ function loc() {
             city_name.innerText = data.location.name + "," + data.location.country;
             const temp = document.createElement("p")
             temp.innerText = "Temperature" +" "+ data.current.temp_c + "℃"
+            const feels = document.createElement("p")
+            feels.innerText = "Feels like" +" "+ data.current.feelslike_c + "℃"
+
             const condition = document.createElement("p");
             condition.innerText = "Condition: " + data.current.condition.text;
 
@@ -19,8 +22,26 @@ function loc() {
 
             container.appendChild(city_name);
             container.appendChild(temp);
+            container.appendChild(feels);
             container.appendChild(condition);
             container.appendChild(icon);
+
+            const conditionText = data.current.condition.text;
+            const normalized = conditionText.toLowerCase();
+            const background = document.getElementById('container');
+
+            if (normalized.includes("mist")) {
+                background.style.background = "linear-gradient(to right, #bdc3c7, #2c3e50)";
+            } else if (normalized.includes("sunny")) {
+                background.style.background = "linear-gradient(to right, #fceabb, #f8b500)";
+            } else if (normalized.includes("cloud")) {
+                background.style.background = "linear-gradient(to right, #d7d2cc, #304352)";
+            } else if (normalized.includes("rain")) {
+                background.style.background = "linear-gradient(to right, #4e54c8, #8f94fb)";
+            } else {
+                background.style.background = "linear-gradient(to right, #ece9e6, #ffffff)";
+            }
+
         })
         .catch((err) => console.log(err))
         document.getElementById('enter').value=""

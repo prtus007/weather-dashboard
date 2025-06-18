@@ -9,7 +9,14 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(0deg,rgb(206, 21, 21),rgb(206, 206, 30));
+    background: linear-gradient(90deg, #fceabb, #f8b500);
+}
+.box{
+    height: 400px;
+    width: 400px;
+    /* background: linear-gradient(to right, #fff6b7, #fcd95d); */
+    border-radius: 5px ;
+    border: 2px solid black;
 }
 h2{
     display: flex;
@@ -24,17 +31,24 @@ h2{
    margin: 5px;
    gap: 5px;
 }
-.box{
-    height: 400px;
-    width: 400px;
-    background-color: rgb(152, 186, 84);
-    border-radius: 5px ;
-    border: 2px solid black;
+#enter{
+    height: 25px;
+    width: 200px;
+    text-align: center;
+    border-radius: 15px;
+    border: none;
+}
+#b1{
+    height: 25px;
+    width: 25px;
+    border-radius: 100px;
+    text-align: center;
+    border: none;
+/}
+#b1:hover{
+   background-color: rgb(129, 231, 129);
 }
 #show{
-    /* margin-left: 50px; */
-    /* margin-top: 50px;
-    text-align: center; */
     position: absolute;
     top: 50%;
     left: 50%;
