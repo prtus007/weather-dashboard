@@ -14,7 +14,6 @@
 .box{
     height: 400px;
     width: 400px;
-    /* background: linear-gradient(to right, #fff6b7, #fcd95d); */
     border-radius: 5px ;
     border: 2px solid black;
 }
